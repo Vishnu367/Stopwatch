@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*, *::after, *::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body, html {
+    font-size: 10px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.stop-watch {
+    width: 35rem;
+    height: 68rem;
+    border-radius: 1.8rem;
+    background-color: white;
+    position: relative;
+}
+
+.circle-container {
+    /* width: 100%;
+    min-width: 32rem;
+    max-width: 48rem;
+    height: 100%;
+    min-height: 4rem;
+    max-height: 8rem; */
+    padding: 5rem;
+}
+
+.outer-circle {
+    width: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    /* background-color: aliceblue; */
+    left: 50%;
+    transform: translateX(-50%);
+    background: conic-gradient(rgb(250, 3, 3) 1deg, aliceblue 0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s linear;
+}
+
+.inner-circle {
+    width: 93%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-style: italic;
+}
+
+.milli-sec {
+    color: rgb(250, 3, 3);
+}
+
+.cta-btn {
+    width: 100%;
+    padding: 1.8rem 2.5rem;
+    border-radius: 2rem;
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    /* background-color: cadetblue; */
+}
+
+.btn {
+    width: 80%;
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    background-color: rgba(250, 3, 3, 0.2);
+    border: none;
+    color: rgb(250, 3, 3);
+    font-weight: 600;
+}
+
+.active {
+    background-color: rgb(250, 3, 3);
+    color: white;
+}
+
+.lap-list {
+    width: 100%;
+    height: 22rem;
+    padding: 2rem 3rem;
+    list-style-type: none;
+    position: absolute;
+    top: 36rem;
+    overflow-x: scroll;
+}
+
+.lap-list::-webkit-scrollbar {
+    display: none;
+}
+
+.list {
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.lap-diff {
+    color: cadetblue;
+}
